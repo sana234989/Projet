@@ -16,4 +16,4 @@ use App\Http\Controllers\homeController;
 
 
 
-Route::get('/zineb', [homecontroller::class,'index']);
+Route::get('/', [homecontroller::class,'index']);
