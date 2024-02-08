@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Utilisation de 100vh pour occuper toute la hauteur de l'écran */
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media screen and (min-width: 768px){
+.content {
+    flex: 1; /* Permet au contenu de prendre tout l'espace restant */
+    position: relative; /* Position relative pour que les éléments enfants puissent être positionnés par rapport à lui */
+    overflow: hidden; /* Pour masquer le contenu débordant des images */
+}
+
+.slider {
+    width: 100%; /* Pour que le slider occupe toute la largeur de la page */
+    height: 100%; /* Pour que le slider occupe toute la hauteur de la page */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute; /* Position absolue pour empiler les images les unes sur les autres */
+    top: 0;
+    left: 0;
+}
+}
+
+.slider img {
+    width: 100%; /* Pour que l'image occupe toute la largeur du slider */
+    height: 100%; /* Pour que l'image occupe toute la hauteur du slider */
+    object-fit: cover; /* Pour que l'image conserve son ratio et soit coupée pour remplir le slider */
+    position: absolute; /* Position absolue pour empiler les images les unes sur les autres */
+    top: 0;
+    left: 0;
+}
+
+
+.text {
+    position: absolute;
+   margin-top: 230px;
+    left: 50%;
+    font-size:20px;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+}
+
+.text1 {
+    margin-bottom: 20px; /* Marge entre les lignes de texte */
+}
+
+.text2 {
+    color: #EEFF0E;
+}
