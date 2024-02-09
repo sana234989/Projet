@@ -38,8 +38,16 @@
             const currentIndex = images.indexOf(img.src);
             const nextIndex = (currentIndex + 1) % images.length;
             img.src = images[nextIndex];
-        }
-
+            //changer le contexte de text apres le chang de chaque slider
+            const text = document.querySelector('.text1 .text2');
+    if (nextIndex === 0) {
+        text.textContent = "Bienvenue a Tifawin ou le charme de la culture locale encontre contemporain pour une experience incormparable";
+    } else if (nextIndex === 1) {
+        text.textContent = "Détendez-vous et profitez d'un séjour luxueux dans notre hôtel de charme. Avec des chambres élégantes, des équipements haut de gamme et un service exceptionnel, nous nous assurons que votre séjour soit aussi confortable que mémorable.";
+    } else if (nextIndex === 2) {
+        text.textContent = "Rechargez vos batteries avec une multitude d'activités passionnantes, puis détendez-vous dans le confort de notre hôtel après une journée bien remplie";
+    }
+}
         // Appeler la fonction changeImage toutes les 8 secondes
         setInterval(() => {
             const img = document.querySelector('.slider img');
