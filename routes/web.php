@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\homeController; 
-use App\Http\Controllers\ReservationController; 
+use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\roomscontroller;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,4 +19,5 @@ use App\Http\Controllers\ReservationController;
 
 
 Route::get('/', [homecontroller::class,'index']);
-route::get('/reservation', [ReservationController::class,'index']);
+route::get('/restauration', [ReservationController::class,'index']);
+route::get('/rooms', [roomscontroller::class,'index']);
