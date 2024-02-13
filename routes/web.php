@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\homeController; 
+use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\roomscontroller;
 
 
 /*
@@ -15,9 +18,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Route::middleware([
     'auth:sanctum',
@@ -34,3 +35,9 @@ Route::get('/forgot-password', function () {
 
 Route::get('/contact', [ContactController::class, 'show'])->name('contact.show');
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
+
+
+Route::get('/', [homecontroller::class,'index']);
+route::get('/restauration', [ReservationController::class,'index']);
+route::get('/rooms', [roomscontroller::class,'index']);
+

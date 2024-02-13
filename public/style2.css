@@ -1,0 +1,106 @@
+/* style2.css de la page reservation */
+
+.intro{
+    background-color:#F2F0F0;
+    position: relative;
+    width:860px;
+    height:1200px;
+}
+.carde1{
+    background-color: aqua;
+    width:400px;
+    height:490px;
+}
+.carde1 img{
+   
+    height:230px;
+}
+.lien1{
+display: inline-block;
+padding: 0.5rem 1rem;
+
+color: #ffffff;
+text-decoration: none;
+border-radius: 0.25rem;
+}
+#card1{
+ background-color: #38AACE;
+ position:absolute;
+ top:700px;
+ margin-left:445px;
+}
+#card2{
+ background-color: #f27c0d;
+ position:absolute;
+ top:700px;
+ margin-left:35px;
+}
+#card3{
+ background-color: #7CC12A;
+ position:absolute;
+ top:190px;
+ margin-left:35px;
+
+}
+#card4{
+ background-color: #C17246;
+ position:absolute;
+ top:190px;
+ margin-left:445px;
+
+}
+.title{
+    position:absolute;
+    color:#A2C579;
+    top:25px;
+    margin-left:280px;
+    font-size:28px;  
+}
+.text{
+    position:absolute;
+    top:70px;
+    margin-left:180px;
+    text-indent: -20px;
+  
+}
+.btn{
+    position:absolute;
+    top:420px;
+}
+#reserv1{
+    position: absolute;
+    margin-left:120px;
+    background-color: #4799BC;
+}
+#reserv2{
+    position: absolute;
+    margin-left:120px;
+    background-color: rgb(223, 113, 10);
+}
+#reserv3{
+    position: absolute;
+    margin-left:120px;
+    background-color:#70bc12;
+}
+#reserv4{
+    position: absolute;
+    margin-left:120px;
+    background-color:#cf6f3c;
+}
+#know1{
+    background-color: #4799BC;
+}
+#know2{
+    background-color: rgb(223, 113, 10);
+}
+#know3{
+    background-color: #70bc12;
+}
+#know4{
+    background-color: #cf6f3c;
+}
+.titre{
+  
+    margin-left:85px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
