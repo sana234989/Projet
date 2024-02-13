@@ -26,10 +26,11 @@
                 <x-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
             </div>
 
-            <div class="flex items-center justify-end mt-4">
-                <x-button>
+            <div class="flex items-center justify-center mt-4">
+                <x-button class="ms-4 bg-orange-700 hover:bg-orange-600 focus:bg-orange-600 active:bg-orange-600 text-black font-bold px-4 py-2" >
                     {{ __('Reset Password') }}
                 </x-button>
+               
             </div>
         </form>
     </x-authentication-card>

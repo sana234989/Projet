@@ -22,6 +22,7 @@
                 <x-button class="ms-4">
                     {{ __('Confirm') }}
                 </x-button>
+                
             </div>
         </form>
     </x-authentication-card>
