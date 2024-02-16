@@ -46,20 +46,34 @@
       <a href="#" class="lien text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">SERVICE</a>
       <a href="#" class="lien text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">OUR GALLERY</a>
       <a href="#" class="lien text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">RESERVATION</a>
-      <a href="#" class="lien text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">CONTACT US</a>
+      <a href="{{ route('contact.show') }}" class="lien text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">CONTACT US</a>
           </div>
         </div>
       </div>
         </div>
       </div>
-      <div class="flex items-center space-x-4" id="btn">
+      {{-- <div class="flex items-center space-x-4" id="btn">
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" id="btn-log">
           Login
         </button>
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"id="btn-sign">
           Sign Up
         </button>
+      </div> --}}
+
+      @if (Route::has('login'))
+      <div class="sm:fixed flex items-center justify-end space-x-4" id="btn">
+          @auth
+              <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
+          @else
+              <a href="{{ route('login') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" id="btn-log">Log in</a>
+
+              @if (Route::has('register'))
+                  <a href="{{ route('register') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"id="btn-sign">Register</a>
+              @endif
+          @endauth
       </div>
+  @endif
     </div>
   </div>
 
