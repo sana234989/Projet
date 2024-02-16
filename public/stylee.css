@@ -47,7 +47,8 @@ body {
 }
 
 .text1 {
-    margin-bottom: 20px; /* Marge entre les lignes de texte */
+    margin-bottom: 20px;
+    line-height: 1.5; /* Marge entre les lignes de texte */
 }
 
 .text2 {

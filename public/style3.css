@@ -520,3 +520,12 @@ top:24px;
 font-family:'Times New Roman', Times, serif;
 
 }
+.border-animation {
+        border: 2px solid rgba(188, 145, 5, 0.986); /* Couleur de la bordure avec transparence */
+        transition: border-color 0.3s ease-in-out; /* Animation de transition */
+}
+.button{
+    background-color: #bd8c6b;
+    transform: rotate(10);
+    transition:background-color 0.3s ease-in-out;
+}
