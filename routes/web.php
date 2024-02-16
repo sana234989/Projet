@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\homeController; 
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\roomscontroller;
 use App\Http\Controllers\roomsdetailcontroller;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +18,7 @@ use App\Http\Controllers\roomsdetailcontroller;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
 
 
 
@@ -41,3 +44,4 @@ Route::get('/roomdetail5', function () {
 Route::get('/roomdetail6', function () {
     return view('roomdetail6');
 });
+

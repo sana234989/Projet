@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+
+    <title>Sign Up</title>
+</head>
+<body>
+    
+
 <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
@@ -46,15 +60,18 @@
                 </div>
             @endif
 
-            <div class="flex items-center justify-end mt-4">
+            <div class="flex items-center justify-center mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
                     {{ __('Already registered?') }}
                 </a>
-
-                <x-button class="ms-4">
+            </div>
+                <div class="flex items-center justify-center mt-4">
+                <x-button class="ms-4 bg-orange-700 hover:bg-orange-600 focus:bg-orange-600 active:bg-orange-600 text-black font-bold px-6 py-2">
                     {{ __('Register') }}
                 </x-button>
             </div>
         </form>
     </x-authentication-card>
 </x-guest-layout>
+</body>
+</html>

@@ -21,11 +21,11 @@
 
             <div class="block">
                 <x-label for="email" value="{{ __('Email') }}" />
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+                <x-input id="email" class="block mt-1 w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  focus:border-slate-300 block w-full p-2.5" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
             </div>
 
             <div class="flex items-center justify-end mt-4">
-                <x-button>
+                <x-button class="ms-4 bg-orange-700 hover:bg-orange-600 focus:bg-orange-600 active:bg-orange-600 text-black font-bold px-4 py-2">
                     {{ __('Email Password Reset Link') }}
                 </x-button>
             </div>
