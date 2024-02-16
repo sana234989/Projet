@@ -1,0 +1,94 @@
+#room{
+    background-color:#f7eed5;
+    width:1160px;
+    height:370px;
+    position: relative;
+
+ }
+ #img1{
+     position:absolute;
+     width:290px;
+     height:290px;
+     top:30px;
+     margin-left:30px;
+ }
+ #service{
+     position: absolute;
+     margin-left:370px;
+ }
+ .room11{
+     position: absolute;
+     margin-left:350px;
+     top:3px;
+ }
+ .trait{
+     position: absolute;
+     width:750px;
+     border-radius:3px;
+     border-color:maroon;
+ }
+/* #name1{
+ position:absolute;
+ top:45px;
+ }
+ #price2{
+ position:absolute;
+  top:45px;
+ }
+ .service1{
+     position: absolute;
+     top:90px;
+ }*/
+
+ #checkin{
+ margin-left:-55px;
+ position: relative;
+ top:40px;
+ }
+ #checkout{
+     margin-left:230px;
+     position: relative;
+     top:-10px;
+    
+}
+
+#info{
+position: absolute;
+ top:25px;
+ margin-left:380px;
+}
+
+#lien1{
+position: absolute;  
+top:228px; 
+display: inline-block;
+padding: 0.5rem 1rem;
+color: white;
+background-color: #A2C579;
+text-decoration: none;
+border-radius: 0.25rem;
+margin-left:530px;
+width:120px;
+height:33px;
+text-align: center;
+}
+#lien2{
+position: absolute;  
+top:228px; 
+display: inline-block;
+padding: 0.5rem 1rem;
+color: white;
+background-color: #A2C579;
+text-decoration: none;
+border-radius: 0.25rem;
+margin-left:655px;
+width:120px;
+height:35px;
+text-align: center;
+}
+#name1{
+color:#a16207;
+}
+#price2{
+ color:#a16207;  
+}
