@@ -1,0 +1,124 @@
+.relative{
+    background-color:white;
+    top:-17px;
+    position:relative;
+    width:1160px;
+    height:600px;
+    margin-left:50px;
+    padding: 20px; /* Ombre légère */
+    border-radius: 10px; /* Coins arrondis */
+    margin-bottom: 20px;  
+}
+/*.card1 img {
+   /* position:relative;
+    width:100%;
+    margin-top:-20px;
+    background-color: aliceblue;
+    margin-top:-20px;
+    width:400px;
+    height:300px;
+}*/
+.imag{
+    width:400px;
+    margin-top:-20px;
+    margin-left:-20px;
+    height:100px;
+    position: relative; 
+}
+.imag img {
+    width: 100%;
+    height:300px;
+}
+
+
+/*.card2 img {
+    
+    width:400px;
+    height:300px;
+    margin-top:-20px;
+    
+}
+.card3 img {
+    display: block;
+    margin: 0 auto; 
+    width: 100%; 
+    height:300px;  
+    margin-top:-20px;
+*/
+.card1 {
+    position: absolute;
+    width:400px;
+    height:650px;
+    padding: 20px;
+    margin-left:-50px;
+    background-color: rgba(193, 129, 87, 0.3);
+} /* Arrière-plan semi-transparent */
+     /* Assure que la div est au-dessus de tout le reste */
+
+.card2 {
+    position: absolute;
+    margin-left:380px;
+    left: 0;
+    width:400px;
+    height:650px;
+    padding: 20px;
+    background-color:rgba(193, 129, 87, 0.3);
+} /* Arrière-plan semi-transparent */
+ /* Assure que la div est au-dessus de tout le reste */
+.card3 {
+    position:relative;
+    margin-left:770px;
+    left: 0;
+    width:400px;
+    height:650px;
+    background-color:rgba(193, 129, 87, 0.3);
+    padding: 20px; /* Arrière-plan semi-transparent */ /* Assure que la div est au-dessus de tout le reste */
+}
+.titre{
+    position: relative;
+   font-size:20px;
+   color:#994610;
+   margin-left:120px;
+   top:230px;
+   font-weight:bold;
+}
+.prix {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height:300px;
+    margin-top:260px;
+}
+
+.colonne1 {
+    flex: 1;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:40px; 
+}
+.btn {
+    background-color: #B4632E;
+    position: absolute;
+    color: black;
+    padding: 10px 20px;
+    width:100px;
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    line-height: 15px;
+    margin-left:2px;
+    top:570px;
+    text-decoration:none;
+}
+.title{
+    color:#858546;
+}
+.duree{
+   color:#B4632E;
+}
+

@@ -44,4 +44,23 @@ Route::get('/roomdetail5', function () {
 Route::get('/roomdetail6', function () {
     return view('roomdetail6');
 });
+Route::get('/login', function () {
+    return view('auth.login');
+})->name('login');
+
+Route::get('/register', function () {
+    return view('auth.register');
+})->name('register');
+Route::get('/restauration', function () {
+    return view('restauration');
+})->name('restaurant');
+route::get('/spa',function () {
+    return view('spa');
+});
+route::get('/spadetails', function () {
+    return view('spadetails');
+});
+Route::get('/spadetails', function () {
+    return view('spadetails');
+})->name('spadetail');
 

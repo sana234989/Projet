@@ -45,20 +45,16 @@
         <a href="#" class="lien text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">ABOUT US</a>
         <a href="#" class="lien text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">SERVICE</a>
         <a href="#" class="lien text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">OUR GALLERY</a>
-        <a href="#" class="lien text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">RESERVATION</a>
+        <a href="{{ route('restaurant') }}" class="lien text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">RESERVATION</a>
         <a href="#" class="lien text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">CONTACT US</a>
             </div>
           </div>
         </div>
           </div>
         </div>
-        <div class="flex items-center space-x-4" id="btn">
-          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" id="btn-log">
-            Login
-          </button>
-          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"id="btn-sign">
-            Sign Up
-          </button>
+        <div class="btn flex items-center space-x-4" id="btn">
+          <a href="{{ route('login') }}" id="btn-log">Login</a>
+         <a href="{{ route('register') }}"id="btn-sign">Sign Up</a>
         </div>
       </div>
     </div>
