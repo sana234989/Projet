@@ -17,8 +17,8 @@
             <h2 id="text1">Séance de relaxation</h2>
             <p class="text">Se sentir en bonne santé et bien dans sa peau n'est pas un luxe mais une nécessité absolue.<br>Guérissez votre âme et votre corps grâce à nos traitements miraculeux et rentrez chez vous comme<br> une nouvelle personne, calme et rafraîchie.</p>
             <div class="deatil1">
-                <h2 class="left">DATES D'OUVERTURE<br> Du lundi au dimanche</h2>
-                <h2 class="right">HEURES D'OUVERTURE<br>10:00 - 19:00</h2>
+                <h2 class="left"><span class="titre">DATES D'OUVERTURE :<br></span> Du lundi au dimanche</h2>
+                <h2 class="right"><span class="titre">HEURES D'OUVERTURE :</span><br>10:00 - 19:00</h2>
             </div>
             <a class="details" href="{{route('spadetail')}}">
                 Detail <i class="fas fa-arrow-right"></i>

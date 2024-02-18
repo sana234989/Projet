@@ -1,5 +1,5 @@
 #nav1 {
-    background-color:#568620
+    background-color:#568620;
 }
 
 #logo {
@@ -11,137 +11,124 @@
 }
 
 
-#lien{ 
-        color: #EEFF0E; 
-        padding: 10px; 
-        text-decoration: none; 
-        transition: background-color 0.3s; 
-        margin-left:50px;
+
+    .lien {
+        position: relative;
+        color: #EEFF0E;
+        font-size: 14px; 
+        margin-left: 100px;
+        margin-top: 40px;
+        text-decoration: none; /* Pour supprimer la soulignement du texte de lien */
     }
-.lien{
-    position: relative;
-    color: #EEFF0E;
-    font-size: 14px; 
-    margin-left:100px;
-    margin-top: 40px;
+    .lien:hover{
+      color:#568620;
     }
+    
     .lien::after {
         content: "";  
         position: absolute;
-        margin-left:80px;
         left: 0; 
         bottom: -2px; 
-        width:70px; 
+        width: 100%; /* Largeur à 100% pour couvrir la largeur du lien */
         height: 2px; 
         background-color: #EEFF0E; 
         transition: transform 0.3s ease-in-out; 
-        transform: translateX(-100%); 
+        transform: scaleX(0); /* Commence avec une largeur nulle */
+        transform-origin: bottom left; /* Origine de la transformation */
     }
     
     .lien:hover::after {
-        transform: translateX(0); 
+        transform: scaleX(1); /* Augmente la largeur au survol */
     }
-    /*#btn{
-        margin-top: -60px;
-        margin-left: 1030px;
-        width:300px;
-        height:50px;
-        color: #FFFFDD;
-       
-    }
-    #btn-log{
-        background-color: #FFFFDD;
-        color:black;
-        padding: 10px 20px; 
-        border: none; 
-        border-radius: 5px;
-        cursor:pointer ;
-        width: 90px;
-        height:35px;
-        text-align:center;
-        font-size: 14px;
-        line-height: 15px
-    }
-    #btn-sign{
-        background-color: #FFFFDD;
-        color: black;
-        padding: 10px 20px; 
-        border: none; 
-        border-radius: 5px;
-        cursor:pointer;
-        width:95px;
-        height:35px;
-        font-size: 14px;
-        text-align: center;
-        line-height: 15px
-    }
-    #btn-sign:hover{
-        background-color: red;
-    }
-    #btn-log:hover{
-        background-color: red; 
-    }*/
-   /* .btn {
-        display: flex;
-        gap: 20px;
-    }
-    
-    .btn a {
-        background-color: #FFFFDD;
+
+    #btn-log {
+        background-color: #EEFF0E;
+        position: absolute;
         color: black;
         padding: 10px 20px;
+        width: 100px;
         border: none;
         border-radius: 5px;
         cursor: pointer;
         text-align: center;
         font-size: 14px;
         line-height: 15px;
+        margin-left: 1010px;
+        top: 15px;
         text-decoration: none;
-    }
-    
-    .btn a:hover {
-        background-color: red  !important;
-    }*/
-    #btn-log {
-        background-color: #FFFFDD;
-        position: absolute;
-        color: black;
-        padding: 10px 20px;
-        width:100px;
-        border:none;
-        border-radius: 5px;
-        cursor: pointer;
-        text-align: center;
-        font-size: 14px;
-        line-height: 15px;
-        margin-left:1010px;
-        top:15px;
-        text-decoration:none;
+        transition: background-color 0.3s; /* Animation de transition */
     }
     
     #btn-log:hover {
-        background-color: red;
+        background-color: #BBC806;
     }
     
   
     #btn-sign {
-        background-color: #FFFFDD;
+        background-color: #EEFF0E;
         color: black;
         padding: 10px 20px;
-        width:100px;
+        width: 100px;
         position: absolute;
         margin-left:1130px;
-        top:15px;
-        border: none;
+        top: 15px;
+        border: 1px solid #555; /* Bordure de 1px solide, couleur #555 */
         border-radius: 5px;
         cursor: pointer;
         text-align: center;
         font-size: 14px;
         line-height: 15px;
         text-decoration: none;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Ombre portée */
+        transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Animation de transition */
     }
     
     #btn-sign:hover {
-        background-color: blue; /* Changez la couleur selon vos besoins */
+        background-color: #BBC806; /* Couleur de fond au survol */
+        color: #EEFF0E; /* Couleur de texte au survol */
+        border-color: #BBC806; /* Couleur de bordure au survol */
     }
+   /* #mobile-menu-button {
+        display: none; 
+        position: absolute; 
+        top: 0;
+        right: 0; 
+        padding: 1rem; 
+        background-color: transparent; 
+        border: none; 
+        cursor: pointer;
+        z-index: 999; 
+    }
+    
+    /* Styles pour l'icône de menu fermé */
+    /*#menu-closed-icon {
+        fill: #d1d5db; /* Couleur des icônes 
+    }
+    
+   
+    @media (max-width: 640px) {
+       
+        #mobile-menu-button {
+            display: block;
+        }
+    
+        .lien {
+            display: none;
+        }
+    
+        #btn {
+            display: block;
+        }
+    }
+    
+    @media (min-width: 641px) {
+    
+        .lien {
+            display: block;
+        }
+    
+        #btn {
+            display: none;
+        }
+    }/*
   

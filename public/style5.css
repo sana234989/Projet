@@ -51,12 +51,34 @@
     color:#994610;
     font-weight:bold;
 }
-.details{
-    position: relative;
-    margin-left:1000px;
-    top:35px;
-    font-size:18px;
-    font-weight:bold;
+.titre{
+    color:white;
 }
+.details {
+    position: relative;
+    margin-left: 1000px;
+    top:25px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out; /* Ajoute une transition de 0.3 seconde sur la transformation */
+}
+
+.details:hover i {
+    transform: translateX(10px); /* Déplace la flèche de 5 pixels vers la droite au survol */
+}
+.relative {
+    position: relative;
+    overflow: hidden; /* Pour masquer le dépassement de contenu */
+}
+
+.img {
+    transition: transform 0.2s ease-in-out; /* Ajoute une transition de 0.5 seconde à la propriété transform */
+}
+
+.relative:hover .img {
+    transform: scale(1.1); /* Agrandit l'image de 10% au survol */
+}
+
+
 
 

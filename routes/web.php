@@ -64,3 +64,4 @@ Route::get('/spadetails', function () {
     return view('spadetails');
 })->name('spadetail');
 
+
