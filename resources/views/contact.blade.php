@@ -12,12 +12,14 @@
 </head>
 
 <body>
-    <section class="text-gray-600 body-font relative">
-        <div class="container px-5 py-24 mx-auto">
+    
+
+
+    <section class="text-gray-600 body-font relative bg-gray-100 ">
+        <div class="container py-24 mx-auto md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
             <div class="flex flex-col text-center w-full mb-12">
                 <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Contact Us</h1>
-                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn
-                    asymmetrical gentrify.</p>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">let's talk.</p>
             </div>
             {{-- @if (session()->has('success'))
           <div class="alert alert-success mt-4 ml-4 mr-4 col-4 text-green-600" role="alert">
@@ -34,7 +36,7 @@
 
             <form action="{{ route('contact.send') }}" method="post">
                 @csrf
-                <div class="lg:w-1/2 md:w-2/3 mx-auto">
+                <div class="">
                     <div class="flex flex-wrap -m-2">
                         <div class="p-2 w-1/2">
                             <div class="relative">
@@ -73,7 +75,7 @@
                                 Send
                             </x-button>
                         </div>
-                        <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
+                        {{-- <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
                             <a class="text-indigo-500">example@email.com</a>
                             <p class="leading-normal my-5">49 Smith St.
                                 <br>Saint Cloud, MN 56301
@@ -110,13 +112,14 @@
                                     </svg>
                                 </a>
                             </span>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
 
             </form>
         </div>
     </section>
+
 </body>
 
 </html>

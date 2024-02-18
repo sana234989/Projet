@@ -34,6 +34,17 @@
             </svg>
           </button>
         </div>
+<<<<<<< HEAD
+        <div class="hidden sm:ml-6 sm:block">
+          <div class="flex space-x-4">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a href="#" class="lien text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium" >HOME</a>
+      <a href="#" class="lien text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">ABOUT US</a>
+      <a href="#" class="lien text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">SERVICE</a>
+      <a href="#" class="lien text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">OUR GALLERY</a>
+      <a href="#" class="lien text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">RESERVATION</a>
+      <a href="{{ route('contact.show') }}" class="lien text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">CONTACT US</a>
+=======
         <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
           <div class="flex flex-shrink-0 items-center">
             <img class="h-8 w-auto" id="logo"  src="{{ asset('image/logo.png') }}" alt="Your Company">
@@ -48,6 +59,7 @@
         <a href="{{ route('restaurant') }}" class="lien text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">RESERVATION</a>
         <a href="#" class="lien text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">CONTACT US</a>
             </div>
+>>>>>>> a1dac3e4f1e02e4b5cd3ddb7effaadc649f055bf
           </div>
         </div>
           </div>
@@ -57,5 +69,30 @@
          <a href="{{ route('register') }}"id="btn-sign">Sign Up</a>
         </div>
       </div>
+<<<<<<< HEAD
+      {{-- <div class="flex items-center space-x-4" id="btn">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" id="btn-log">
+          Login
+        </button>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"id="btn-sign">
+          Sign Up
+        </button>
+      </div> --}}
+
+      @if (Route::has('login'))
+      <div class="sm:fixed flex items-center justify-end space-x-4" id="btn">
+          @auth
+              <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
+          @else
+              <a href="{{ route('login') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" id="btn-log">Log in</a>
+
+              @if (Route::has('register'))
+                  <a href="{{ route('register') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"id="btn-sign">Register</a>
+              @endif
+          @endauth
+      </div>
+  @endif
+=======
+>>>>>>> a1dac3e4f1e02e4b5cd3ddb7effaadc649f055bf
     </div>
 </nav>
