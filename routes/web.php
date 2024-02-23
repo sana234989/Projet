@@ -9,7 +9,7 @@ use App\Http\Controllers\roomsdetailcontroller;
 use App\Http\Controllers\roomdetail1controller;
 use App\Http\Controllers\roomtypecontroller;
 use App\Http\Controllers\spaservicecontroller;
-
+use App\Http\Controllers\restaurantcontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,9 +54,9 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('auth.register');
 })->name('register');
-Route::get('/restauration', function () {
-    return view('restauration');
-})->name('restaurant');
+Route::get('/restauration', [restaurantcontroller::class,'inforest']);
+    
+
 route::get('/spa',function () {
     return view('spa');
 });
