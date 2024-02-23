@@ -18,6 +18,7 @@ return new class extends Migration
             $table->foreignId('id_client')->references('id')->on('clients');
             $table->foreignId('idpersonnel')->references('id')->on('personnels');
             $table->float('montant',100);
+            $table->timestamps(); 
         });
     }
 

@@ -6,6 +6,9 @@ use App\Http\Controllers\homeController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\roomscontroller;
 use App\Http\Controllers\roomsdetailcontroller;
+use App\Http\Controllers\roomdetail1controller;
+use App\Http\Controllers\roomtypecontroller;
+use App\Http\Controllers\spaservicecontroller;
 
 
 /*
@@ -57,11 +60,15 @@ Route::get('/restauration', function () {
 route::get('/spa',function () {
     return view('spa');
 });
-route::get('/spadetails', function () {
-    return view('spadetails');
-});
-Route::get('/spadetails', function () {
-    return view('spadetails');
-})->name('spadetail');
+route::get('/spadetails', [spaservicecontroller::class,'infospa']);
 
+
+route::get('/verify', [roomdetail1controller::class,'verifdate'])->name('verifydate');
+Route::get('/about', function () {
+    return view('aboutus_services');
+});
+Route::get('/menu', function () {
+    return view('reserve');
+});
+Route::get('/roomstype',[roomtypecontroller::class,'selectionner']);
 

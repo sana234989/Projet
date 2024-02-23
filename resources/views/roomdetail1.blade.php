@@ -33,17 +33,31 @@
             </div>
             <hr class="trait">
             <div class="btn">
-                <div class="flex flex-col md:flex-row mb-4 "id="checkin">
-                    <label class="check mr-2 md:mr-4">Check-in</label>
-                    <input type="text" class="border border-gray-300 px-2 py-1 rounded mb-2 md:mb-0">
-                </div>
-                <div class="flex flex-col md:flex-row mb-4" id="checkout">
-                    <label class="check mr-2 md:mr-4">Check-out</label>
-                    <input type="text" class="border border-gray-300 px-2 py-1 rounded mb-2 md:mb-0">
-                </div>
-                <div class="reserv flex items-center">
-                    <a href="#" class="mr-8 border-style: solid;" id="lien1">Check Now</a>
-                    <a href="#" id="lien2">Reserver</a>
+                    <form action="{{route('verifydate')}}" method="GET">
+                        @csrf <!-- Ajoutez le jeton CSRF pour la sécurité -->
+                        <input type="hidden" name="chambre" value="Single Room"> <!-- Champ caché pour le nom de la chambre -->
+                        <div class="flex flex-col md:flex-row mb-4 "id="checkin">
+                            <label class="check mr-2 md:mr-4">Check-in</label>
+                            <input type="date" name="date_debut" class="border border-gray-300 px-2 py-1 rounded mb-2 md:mb-0">
+                        </div>
+                        <div class="flex flex-col md:flex-row mb-4" id="checkout">
+                            <label class="check mr-2 md:mr-4">Check-out</label>
+                            <input type="date" name="date_fin" class="border border-gray-300 px-2 py-1 rounded mb-2 md:mb-0">
+                        </div>
+            
+                        <input type="hidden" name="erreur"> 
+                 
+                        <div class="reserv flex items-center">
+                            <button type="submit" class="mr-8 border-style: solid;" id="lien1">Check Now</button>
+                            <a href="#" id="lien2">Reserver</a>
+                        </div>
+
+                    </form>
+                    @if(Session::has('erreur'))
+    <div class="alert alert-danger">
+        {{ Session::get('erreur') }}
+    </div>
+@endif
                 </div>
             </div>
         </div>

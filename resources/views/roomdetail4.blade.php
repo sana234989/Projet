@@ -16,7 +16,7 @@
         <div class="md:flex-grow"id="info">
             <div class="room1">
                 <h3 class="text-xl font-bold mb-2 font-semibold " id="name">Room name</h3>
-                <h3 class="text-1xl font-bold mb-2 text-600 font-serif" id="name1">Single Room</h3>
+                <h3 class="text-1xl font-bold mb-2 text-600 font-serif" id="name1">Royal Room</h3>
             </div>
             <div class="room11">
                 <h3 class="text-xl font-bold mb-2" id="price1">Price</h3>
