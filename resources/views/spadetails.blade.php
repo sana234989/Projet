@@ -11,85 +11,28 @@
 </head>
 <body>
     <div class="relative">
-        <div class="card1">
-            <div class="imag">
-       <img class="hammam" src="{{asset('image/hammam1.jpg')}}" alt="image">
-            </div>
-       <h1 class="titre">HAMMAM</h1>
-       <div class="prix">
+       @foreach($spas as $key=>$spa)
+<div class="card{{$key+1}}">
+    <div class="imag">
+        <img class="hammam" src="{{ asset($spa->image_service) }}" alt="image">
+    </div>
+    <h1 class="titre">{{ $spa->nom_service }}</h1>
+    <div class="prix">
         <div class="colonne1">
+            @foreach($spadetails as $spaDetail)
+            @if($spaDetail->idservice === $spa->id)
             <div class="row">
-                <p class="title">Bain hydromassant</p>
-                <p class="duree">30min</p>
-                <p class="duree">250dh</p>
+                <p class="title">{{ $spaDetail->sous_service }}</p>
+                <p class="duree">{{ $spaDetail->time }}</p>
+                <p class="duree">{{ $spaDetail->prix }}</p>
             </div>
-            <div class="row">
-                <p class="title">Gommage en cabine</p>
-                <p class="duree">30min</p>
-                <p class="duree">250dh</p>
-            </div>
-            <div class="row">
-                <p class="title">Douche sous affusion</p>
-                <p class="duree">30min</p>
-                <p class="duree">300dh</p>
-            </div>
+            @endif
+            @endforeach
         </div>
     </div>
-        <a href="#" class="btn">RESERVER</a>
-        </div>
-        <div class="card2">
-            <div class="imag">
-            <img class="soin" src="{{asset('image/soin1.jpg')}}" alt="image">
-            </div>
-            <h1 class="titre">SOINS CORPS</h1>
-            <div class="prix">
-                <div class="colonne1">
-                    <div class="row">
-                        <p class="title">Bain hydromassant</p>
-                        <p class="duree">30min</p>
-                        <p class="duree">250dh</p>
-                    </div>
-                    <div class="row">
-                        <p class="title">Gommage en cabine</p>
-                        <p class="duree">30min</p>
-                        <p class="duree">250dh</p>
-                    </div>
-                    <div class="row">
-                        <p class="title">Douche sous affusion</p>
-                        <p class="duree">30min</p>
-                        <p class="duree">300dh</p>
-                    </div>
-                </div>
-            </div>
-        <a href="#" class="btn" >RESERVER</a>
-             </div>
-             <div class="card3">
-                <div class="imag">
-                <img class="visage" src="{{asset('image/voisine5.jpg')}}" alt="image">
-                </div>
-                <h1 class="titre">SOINS DU VISAGE </h1>
-                <div class="prix">
-                    <div class="colonne1">
-                        <div class="row">
-                            <p class="title">Bain hydromassant</p>
-                            <p class="duree">30min</p>
-                            <p class="duree">250dh</p>
-                        </div>
-                        <div class="row">
-                            <p class="title">Gommage en cabine</p>
-                            <p class="duree">30min</p>
-                            <p class="duree">250dh</p>
-                        </div>
-                        <div class="row">
-                            <p class="title">Douche sous affusion</p>
-                            <p class="duree">30min</p>
-                            <p class="duree">300dh</p>
-                        </div>
-                    </div>
-                </div>
-                 <a href="#"class="btn">RESERVER</a>
-                 </div>
-    </div>
+    <a href="#" class="btn">RESERVER</a>
+</div>
+@endforeach
     <script>
      document.addEventListener('DOMContentLoaded', function() {
     function changeImage(cardId) {
