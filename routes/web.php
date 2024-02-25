@@ -17,6 +17,12 @@ use App\Http\Controllers\room3controller;
 use App\Http\Controllers\room4controller;
 use App\Http\Controllers\room5controller;
 use App\Http\Controllers\room6controller;
+use App\Models\espaceevenet;
+use App\Models\restaurant_menu;
+use App\Models\resataurant;
+use App\Models\service;
+use App\Models\roomtypess;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -50,6 +56,27 @@ Route::get('/register', function () {
     return view('auth.register');
 })->name('register');
 Route::get('/restauration', [restaurantcontroller::class,'inforest']);
+Route::get('/menu_chinose', function () {
+    $resultat = resataurant::where('title', 'Chinese restaurant')->pluck('id')->first();
+    $donnees = restaurant_menu::where('idresturant', $resultat)->get();
+    return view('menu', ['donnees' => $donnees]);
+});
+Route::get('/about',function(){
+    return view('aboutus');
+});
+Route::get('/service',function(){
+    return view('services');
+});
+Route::get('/menu_marrocain', function () {
+    $resultat = resataurant::where('title', 'Marocain restaurant')->pluck('id')->first();
+    $donnees = restaurant_menu::where('idresturant',$resultat)->get();
+    return view('menu',['donnees' => $donnees]);
+});
+Route::get('/menu_espagnol', function () {
+    $resultat = resataurant::where('title', 'Espagnol restaurant')->pluck('id')->first();
+    $donnees = restaurant_menu::where('idresturant',$resultat)->get();
+    return view('menu',['donnees' => $donnees]);
+});
     
 
 route::get('/spa',function () {
@@ -59,12 +86,19 @@ route::get('/spadetails', [spaservicecontroller::class,'infospa']);
 
 
 route::get('/verify', [roomdetail1controller::class,'verifdate'])->name('verifydate');
-Route::get('/about', function () {
-    return view('aboutus_services');
-});
+
 Route::get('/menu', function () {
     return view('reserve');
 });
 Route::get('/our',[personelcontroller::class,'infopesr']);
 Route::get('/roomstype',[roomtypecontroller::class,'selectionner']);
-
+Route::get('/espace_event', function () {
+    $donnees = espaceevenet::all();
+    return view('espace_event', ['donnees' => $donnees]);    
+});
+Route::get('/reserve', function () {
+    $donnees1 = espaceevenet::all();
+    $donnees2 = roomtypess::all();
+    $donnees3= service::all();
+    return view('reserve', ['donnees1' => $donnees1,'donnees2' => $donnees2,'donnees3' => $donnees3]);    
+});
