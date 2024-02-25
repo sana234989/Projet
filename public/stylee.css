@@ -7,50 +7,71 @@ body {
 }
 
 
-@media screen and (min-width: 768px){
+
 .content {
-    flex: 1; /* Permet au contenu de prendre tout l'espace restant */
-    position: relative; /* Position relative pour que les éléments enfants puissent être positionnés par rapport à lui */
-    overflow: hidden; /* Pour masquer le contenu débordant des images */
+    flex: 1; 
+    position: relative;
+    overflow: hidden; 
 }
+    .slider {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        z-index:1;
+    }
+    
+    .slider::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(10, 0, 0, 0.3);
+        z-index: 1;
+    }
+    
+    
+    .text {
+        position: absolute;
+       margin-top:290px;
+        left:35%;
+        font-size:18px;
+        transform: translateX(-50%);
+        text-align: center;
+        color: white;
+        z-index:1;
+    }
+    .titre{
+        position:absolute;
+        left:30px;
+        margin-top:220px;
+        color:#e87338;
+        font-size:30px;
+        z-index: 1;
+    
+    }
+    
+    .text1 {
+        margin-bottom: 20px;
+        line-height: 1.5; /* Marge entre les lignes de texte */
+        text-align: justify;
+         /* Justifier le texte */
+    }
+    
+    .text2 {
+        color: #EEFF0E;
+    }
 
-.slider {
-    width: 100%; /* Pour que le slider occupe toute la largeur de la page */
-    height: 100%; /* Pour que le slider occupe toute la hauteur de la page */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute; /* Position absolue pour empiler les images les unes sur les autres */
-    top: 0;
-    left: 0;
-}
-}
-
-.slider img {
-    width: 100%; /* Pour que l'image occupe toute la largeur du slider */
-    height: 100%; /* Pour que l'image occupe toute la hauteur du slider */
-    object-fit: cover; /* Pour que l'image conserve son ratio et soit coupée pour remplir le slider */
-    position: absolute; /* Position absolue pour empiler les images les unes sur les autres */
-    top: 0;
-    left: 0;
-}
 
 
-.text {
-    position: absolute;
-   margin-top: 230px;
-    left: 50%;
-    font-size:20px;
-    transform: translateX(-50%);
-    text-align: center;
-    color: white;
-}
 
-.text1 {
-    margin-bottom: 20px;
-    line-height: 1.5; /* Marge entre les lignes de texte */
-}
 
-.text2 {
-    color: #EEFF0E;
-}
+
+
+

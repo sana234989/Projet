@@ -1,0 +1,125 @@
+
+.card {
+    display: flex;
+    position: relative;
+    background-color: rgb(250, 249, 248);
+    flex-direction:row;/* Marge inférieure pour séparer les cartes */
+    border: 1px solid #ddd; /* Bordure de la carte */
+    border-radius: 8px; /* Coins arrondis de la carte */
+    overflow: hidden; /* Masquer tout contenu débordant de la carte */
+    width:300px;
+    height:420px;
+    transition: transform 0.3s ease;
+    /* Largeur fixe pour les cartes */
+}
+.card:hover {
+    transform: scale(1.05); /* Zoom de 5% */
+ 
+}
+#card1{
+
+}
+#card2{
+ margin-left:310px;
+ margin-top:-422px;   
+}
+#card3{
+    margin-left:620px;
+ margin-top:-422px;  
+}
+#card4{
+    position: relative;
+    margin-left:930px;
+    margin-top:-422px;
+    
+    
+}
+.text1{
+    position:relative;
+    margin-left:25px;
+    font-size:16px;
+    color:rgb(6, 9, 64);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-indent: -20px;
+}
+
+.text1 span {
+    margin-top: 5px;
+    color:rgb(211, 211, 5);
+    font-size:17px;
+}
+.title {
+    text-align: center;
+    position: relative;
+}
+.title span{
+    color:gray;
+}
+
+.title::after {
+    content: "";
+    position: absolute;
+    bottom:-3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width:200px; /* Longueur du trait */
+    height: 2px; /* Épaisseur du trait */
+    background-color: #333; /* Couleur du trait */
+}
+.card-container {
+    position: relative;
+    z-index: 2;
+}
+
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(181, 178, 178, 0.5); /* Couleur blanche avec 50% de transparence */
+    z-index:-1; /* Mettre le pseudo-élément en-dessous du contenu de la carte */
+}
+
+
+.card img {
+    width: 200px; /* Pour que l'image occupe toute la largeur de la carte */
+    height: 200px; /* Ajuste automatiquement la hauteur de l'image en fonction de la largeur */
+    border-radius: 50%;
+    border: 2px solid rgb(211, 211, 5);
+    margin-left:50px;
+    position: relative; /* Assure que l'image est positionnée correctement par rapport au contenu de la carte */
+    z-index: 1; /* Coins arrondis uniquement en haut de l'image */
+}
+.card-content {
+    padding: 20px; /* Espacement interne pour le contenu de la carte */
+    text-align: center; /* Centrer le texte horizontalement */
+}
+
+/*
+@media (max-width: 767px) {
+    .card {
+        width:300px; 
+        flex: 1 0 auto; 
+        margin-left:10px;
+        flex-wrap: wrap; 
+    }
+
+    .card img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+
+    .text1 {
+        font-size: 16px;
+    }
+
+    .text-sm {
+        font-size: 14px;
+    }
+}*/

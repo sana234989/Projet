@@ -1,39 +1,51 @@
-#nav1 {
-    background-color:#568620;
+
+
+.logo {
+    width:200px; 
+    height:auto;
+    
+
+  
 }
 
-#logo {
-    max-width: 130px; 
-    height: auto;
-    vertical-align: middle;
-    align-items: end; 
-    justify-content: end;
-}
+.lien{
+        /* Styles de base */
+        position: relative;/* Couleur du texte */
+        text-decoration: none; /* Supprimer le soulignement par défaut */
+        padding: 5px 10px; /* Espacement à l'intérieur du lien */
+        transition: color 0.3s, background-color 0.3s; /* Animation de transition */
+         margin-left:5px;
+        /* Ajouter une bordure transparente */
+        border: 1px solid transparent;
+        border-radius: 3px; /* Arrondir les coins */
+    }
 
 
-
-    .lien {
+    /*.lien {
         position: relative;
         color: #EEFF0E;
         font-size: 14px; 
         margin-left: 100px;
         margin-top: 40px;
-        text-decoration: none; /* Pour supprimer la soulignement du texte de lien */
-    }
-    .lien:hover{
-      color:#568620;
+        text-decoration: none; /* Pour supprimer la soulignement du texte de lien 
+    }*/
+    .lien:hover {
+        /* Styles au survol */
+        color: white; /* Nouvelle couleur du texte */
+        background-color: #c05621; /* Nouvelle couleur de fond */
+        border-color: #c05621; 
     }
     
     .lien::after {
         content: "";  
         position: absolute;
-        left: 0; 
+        left:0px; 
         bottom: -2px; 
         width: 100%; /* Largeur à 100% pour couvrir la largeur du lien */
         height: 2px; 
-        background-color: #EEFF0E; 
+        background-color: #c05621; 
         transition: transform 0.3s ease-in-out; 
-        transform: scaleX(0); /* Commence avec une largeur nulle */
+        transform: scaleX(0); 
         transform-origin: bottom left; /* Origine de la transformation */
     }
     
@@ -41,7 +53,8 @@
         transform: scaleX(1); /* Augmente la largeur au survol */
     }
 
-    #btn-log {
+
+   /* #btn-log {
         background-color: #EEFF0E;
         position: absolute;
         color: black;
@@ -56,7 +69,7 @@
         margin-left: 1010px;
         top: 15px;
         text-decoration: none;
-        transition: background-color 0.3s; /* Animation de transition */
+        transition: background-color 0.3s; 
     }
     
     #btn-log:hover {
@@ -72,21 +85,21 @@
         position: absolute;
         margin-left:1130px;
         top: 15px;
-        border: 1px solid #555; /* Bordure de 1px solide, couleur #555 */
+        border: 1px solid #555; 
         border-radius: 5px;
         cursor: pointer;
         text-align: center;
         font-size: 14px;
         line-height: 15px;
         text-decoration: none;
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Ombre portée */
-        transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Animation de transition */
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+        transition: background-color 0.3s, color 0.3s, border-color 0.3s; 
     }
     
     #btn-sign:hover {
-        background-color: #BBC806; /* Couleur de fond au survol */
-        color: #EEFF0E; /* Couleur de texte au survol */
-        border-color: #BBC806; /* Couleur de bordure au survol */
+        background-color: #BBC806;
+        color: #EEFF0E; 
+        border-color: #BBC806; 
     }
    /* #mobile-menu-button {
         display: none; 

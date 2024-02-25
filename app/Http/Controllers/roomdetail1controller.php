@@ -18,12 +18,11 @@ class roomdetail1controller extends Controller
       if($year1!=2024 && $year2!=2024){
         Session::flash('erreur', 'Il faut saisir l\'année en 2024');
       }
-      return redirect()->back();
      }  
      public function verifdate(request $request) {
+
         $date_debut = $request->input('date_debut');
         $date_fin = $request->input('date_fin');
-        
         // Récupérer le nom de la chambre à partir de l'input hidden
         $nom_chambre = $request->input('chambre');
         
@@ -34,31 +33,32 @@ class roomdetail1controller extends Controller
         
         // Vérifier si les dates de début et de fin de la réservation chevauchent une réservation existante pour cette chambre
         $reservations = DB::table('reservation_chambres')
-            ->join('reservations', 'reservation_chambres.idreservation', '=', 'reservations.id')
-            ->where('reservation_chambres.idroomtype', '=', $id_chambre)
-            ->where(function ($query) use ($date_debut, $date_fin) {
-                $query->whereBetween('reservations.date_debut', [$date_debut, $date_fin])
-                    ->orWhereBetween('reservations.date_fin', [$date_debut, $date_fin])
-                    ->orWhere(function ($query) use ($date_debut, $date_fin) {
-                        $query->where('reservations.date_debut', '<', $date_debut)
-                            ->where('reservations.date_fin', '>', $date_debut);
-                    })
-                    ->orWhere(function ($query) use ($date_debut, $date_fin) {
-                        $query->where('reservations.date_debut', '<', $date_fin)
-                            ->where('reservations.date_fin', '>', $date_fin);
-                    });
-            })
-            ->get();
+        ->join('reservations', 'reservation_chambres.idreservation', '=', 'reservations.id')
+        ->where('reservation_chambres.idroomtype', '=', $id_chambre)
+        ->where(function ($query) use ($date_debut, $date_fin) {
+            $query->whereBetween('reservations.date_debut', [$date_debut, $date_fin])
+                ->orWhereBetween('reservations.date_fin', [$date_debut, $date_fin])
+                ->orWhere(function ($query) use ($date_debut, $date_fin) {
+                    $query->where('reservations.date_debut', '<', $date_debut)
+                        ->where('reservations.date_fin', '>', $date_debut);
+                })
+                ->orWhere(function ($query) use ($date_debut, $date_fin) {
+                    $query->where('reservations.date_debut', '<', $date_fin)
+                        ->where('reservations.date_fin', '>', $date_fin);
+                });
+        })
+        ->get();
         
         // Si $reservations n'est pas vide, cela signifie que la chambre n'est pas disponible pour les dates spécifiées
-        if ($reservations->isEmpty()) {
+        if ($reservations->count() === 0) {
             // Chambre disponible
             Session::flash('erreur', "la chambre est disponible");
+            return back();
         } else {
             // Chambre non disponible
             Session::flash('erreur', "la chambre n est pas disponible");
+            return back();
         }
-        return redirect()->back();
      }
 }
 
