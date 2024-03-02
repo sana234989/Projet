@@ -23,4 +23,6 @@ class ContactController extends Controller
         // dd('sent');
         return redirect()->back()->with('success','Message sent successfully');
     }
+
+    
 }

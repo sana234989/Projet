@@ -1,0 +1,84 @@
+.img{
+    top:40px;
+    position:relative;
+    width:900px;
+    height:500px;
+    margin-left:200px;
+}
+
+.text {
+    position:relative;
+    margin-left:240px;
+    top:130px;
+    font-size: 18px; /* Taille de la police */
+    /* Espacement entre les lignes */
+    margin-top: 1rem; /* Marge en haut du paragraphe */
+    text-align: center;
+    font-weight: 600; 
+    /* Alignement du texte */
+}
+.text11{
+    position: relative;
+    top:100px;
+    margin-left:460px;
+    font-size:27px;
+    color:#BD7445;
+}
+#text1{
+    position: relative;
+    top:120px;
+    margin-left:540px;
+    font-size:22px;
+    color:#994610;
+    font-weight:bold;
+}
+.deatil1 {
+    overflow: hidden; /* Clear floats */
+}
+
+.left {
+   position: relative;
+    margin-left:300px;
+    margin-top:210px;
+    color:#994610;
+    font-weight:bold; /* Espace entre les éléments */
+}
+
+.right {
+    position:relative;
+    margin-left:800px;
+    margin-top:-48px;
+    color:#994610;
+    font-weight:bold;
+}
+.titre{
+    color:white;
+}
+.details {
+    position: relative;
+    margin-left: 1000px;
+    top:25px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out; /* Ajoute une transition de 0.3 seconde sur la transformation */
+}
+
+.details:hover i {
+    transform: translateX(10px); /* Déplace la flèche de 5 pixels vers la droite au survol */
+}
+.relative {
+    position: relative;
+    overflow: hidden; /* Pour masquer le dépassement de contenu */
+}
+
+.img {
+    transition: transform 0.2s ease-in-out; /* Ajoute une transition de 0.5 seconde à la propriété transform */
+}
+
+.relative:hover .img {
+    transform: scale(1.1); /* Agrandit l'image de 10% au survol */
+}
+
+
+
+

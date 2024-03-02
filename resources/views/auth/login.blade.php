@@ -54,7 +54,7 @@
                     @endif
                 </div>
                 <div class="flex items-center justify-center mt-4">
-                    <x-button class="ms-4 bg-orange-700 hover:bg-orange-600 focus:bg-orange-600 active:bg-orange-600 text-black font-bold px-4 py-2">
+                    <x-button class="ms-4 bg-amber-700 hover:bg-amber-600 focus:bg-amber-600 active:bg-amber-600 text-white font-bold px-4 py-2">
                         {{ __('Log in') }}
                     </x-button>
                 </div>

@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('stylee.css') }}">
-    <title>Document</title>
+    <title>Home Page</title>
     
 </head>
 
 <body>
+    
     <div class="navbar">
         @include('navbar')
     </div>
@@ -24,8 +25,7 @@
             <p class="text1"><span class="text2">Bienvenue à Tifawin</span>, où le charme de la culture locale encontre contemporain pour une expérience incomparable.</p>
         </div>
       
-    </div>
-    </div>
+ 
     <script>
         function changeImage(img) {
             // Liste des images à afficher
@@ -54,6 +54,8 @@ if (nextIndex === 0) {
             changeImage(img);
         }, 8000); // 8000 millisecondes = 8 secondes
     </script>
+
+
 </body>
 
 </html> 

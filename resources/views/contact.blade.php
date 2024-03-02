@@ -8,13 +8,15 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
 
-    <title>Document</title>
+    <title>Contact</title>
 </head>
 
 <body>
     
 
-
+    <div class="navbar">
+        @include('navbar')
+    </div>
     <section class="text-gray-600 body-font relative bg-gray-100 ">
         <div class="container py-24 mx-auto md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
             <div class="flex flex-col text-center w-full mb-12">

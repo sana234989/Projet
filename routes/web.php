@@ -6,6 +6,7 @@ use App\Http\Controllers\homeController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\roomscontroller;
 use App\Http\Controllers\roomsdetailcontroller;
+use App\Http\Controllers\AuthController;
 
 
 /*
@@ -18,12 +19,32 @@ use App\Http\Controllers\roomsdetailcontroller;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+// Route::middleware([
+//     'auth:sanctum',
+//     config('jetstream.auth_session'),
+//     'verified',
+// ])->group(function () {
+//     Route::get('/dashboard', function () {
+//         return view('dashboard');
+//     })->name('dashboard');
+// });
 
 
+Route::post('/logout', [AuthController::class ,'logout'])->name('logout');
+
+Route::get('/', [homecontroller::class,'index'])->name('home');
+
+// Première route pour afficher le formulaire de contact
+Route::get('/contact', [ContactController::class, 'show'])->name('contact.show');
+
+// Deuxième route pour traiter l'envoi du formulaire de contact
+Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
 
 
-Route::get('/home', [homecontroller::class,'index']);
-route::get('/restauration', [ReservationController::class,'index']);
+route::get('/restauration', [ReservationController::class,'index'])->name('restaurant');
 route::get('/rooms', [roomscontroller::class,'index']);
 route::get('/roomsdetail', [roomsdetailcontroller::class,'index']);
 Route::get('/roomdetail1', function () {
@@ -44,4 +65,27 @@ Route::get('/roomdetail5', function () {
 Route::get('/roomdetail6', function () {
     return view('roomdetail6');
 });
+// Route::get('/login', function () {
+//     return view('auth.login');
+// })->name('login');
 
+// Route::get('/register', function () {
+//     return view('auth.register');
+// })->name('register');
+Route::get('/restauration', function () {
+    return view('restauration');
+})->name('restaurant');
+route::get('/spa',function () {
+    return view('spa');
+});
+route::get('/spadetails', function () {
+    return view('spadetails');
+});
+Route::get('/spadetails', function () {
+    return view('spadetails');
+})->name('spadetail');
+
+
+Route::get('/gallery', function () {
+    return view('Our_gallery');
+})->name('gallary');

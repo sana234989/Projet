@@ -7,6 +7,9 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href= "{{ asset('style2.css') }}" >
 </head>
+<div class="navbar">
+    @include('navbar')
+</div>
 <body class="bg-gray-200">
 
   <div class="general card flex justify-center items-center h-auto">
