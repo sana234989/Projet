@@ -1,3 +1,34 @@
+
+
+.logo {
+    width:200px; 
+    height:auto;
+    
+
+  
+}
+
+.titre {
+
+    font-weight: bold;
+    filter: drop-shadow(0 0 0.75rem rgb(184, 111, 3));
+
+}
+
+.lien{
+        /* Styles de base */
+        position: relative;/* Couleur du texte */
+        text-decoration: none; /* Supprimer le soulignement par défaut */
+        padding: 5px 10px; /* Espacement à l'intérieur du lien */
+        transition: color 0.3s, background-color 0.3s; /* Animation de transition */
+         margin-left:5px;
+        /* Ajouter une bordure transparente */
+        border: 1px solid transparent;
+        border-radius: 3px; /* Arrondir les coins */
+    }
+
+
+    /*.lien {
 #nav1 {
     background-color:#568620;
 }
@@ -20,20 +51,23 @@
         margin-top: 40px;
         text-decoration: none; /* Pour supprimer la soulignement du texte de lien */
     }
-    .lien:hover{
-      color:#568620;
+    .lien:hover {
+        /* Styles au survol */
+        color: white; /* Nouvelle couleur du texte */
+        background-color: #c05621; /* Nouvelle couleur de fond */
+        border-color: #c05621; 
     }
     
     .lien::after {
         content: "";  
         position: absolute;
-        left: 0; 
+        left:0px; 
         bottom: -2px; 
         width: 100%; /* Largeur à 100% pour couvrir la largeur du lien */
         height: 2px; 
-        background-color: #EEFF0E; 
+        background-color: #c05621; 
         transition: transform 0.3s ease-in-out; 
-        transform: scaleX(0); /* Commence avec une largeur nulle */
+        transform: scaleX(0); 
         transform-origin: bottom left; /* Origine de la transformation */
     }
     
@@ -41,112 +75,8 @@
         transform: scaleX(1); /* Augmente la largeur au survol */
     }
 
-    #btn-log {
-        background-color: #EEFF0E;
-        position: absolute;
-        color: black;
-        padding: 10px 20px;
-        width: 100px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        text-align: center;
-        font-size: 14px;
-        line-height: 15px;
-        margin-left: 1010px;
-        top: 15px;
-        text-decoration: none;
-        transition: background-color 0.3s; /* Animation de transition */
-    }
-    
-    #btn-log:hover {
-        background-color: #BBC806;
-    }
-    
-  
-    #btn-sign {
-        background-color: #EEFF0E;
-        color: black;
-        padding: 10px 20px;
-        width: 100px;
-        position: absolute;
-        margin-left:1130px;
-        top: 15px;
-        border: 1px solid #555; /* Bordure de 1px solide, couleur #555 */
-        border-radius: 5px;
-        cursor: pointer;
-        text-align: center;
-        font-size: 14px;
-        line-height: 15px;
-        text-decoration: none;
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Ombre portée */
-        transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Animation de transition */
-    }
-    
-    #btn-sign:hover {
-        background-color: #BBC806; /* Couleur de fond au survol */
-        color: #EEFF0E; /* Couleur de texte au survol */
-        border-color: #BBC806; /* Couleur de bordure au survol */
-    }
-   /* /* #mobile-menu-button {
-        display: none; 
-        position: absolute; 
-        top: 0;
-        right: 0; 
-        padding: 1rem; 
-        background-color: transparent; 
-        border: none; 
-        cursor: pointer;
-        z-index: 999; 
-    }
-    
-    /* Styles pour l'icône de menu fermé */
-    /*#menu-closed-icon {
-        fill: #d1d5db; /* Couleur des icônes 
-    }
-    
-   
-    @media (max-width: 640px) {
-       
-        #mobile-menu-button {
-            display: block;
-        }
-    
-        .lien {
-            display: none;
-        }
-    
-        #btn {
-            display: block;
-        }
-    }
-    
-    @media (min-width: 641px) {
-    
-        .lien {
-            display: block;
-        }
-    
-        #btn {
-            display: none;
-        }
-    }/*
-   */
 
-   /* @media (max-width: 768px) {
-    body {
-        font-size: smaller; 
-      }
-    .flex-wrap {
-      flex-direction: column;
-    }
-    .flex.items-center {
-      order: 1;
-    }
-    a.flex.items-center {
-      order: 1;
-    }
-  } */
+ 
 
   @media (max-width: 768px) {
     body {

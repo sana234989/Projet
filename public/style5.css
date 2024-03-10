@@ -75,9 +75,7 @@
     transition: transform 0.2s ease-in-out; /* Ajoute une transition de 0.5 seconde à la propriété transform */
 }
 
-.relative:hover .img {
-    transform: scale(1.1); /* Agrandit l'image de 10% au survol */
-}
+
 
 
 

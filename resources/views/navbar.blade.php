@@ -30,13 +30,6 @@
                     @if (Route::has('login'))
                         <div class="">
                             @if (Auth::check())
-                                {{-- {{ Auth::user()->name }}
-                            <form action="{{ route('logout') }}" method="POST" class="inline">
-                                @csrf
-                                <button type="submit" class="text-white bg-amber-700 hover:bg-amber-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2">
-                                    Log Out
-                                </button>
-                            </form> --}}
 
                                 <button id="dropdownInformationButton" data-dropdown-toggle="dropdownInformation"
                                     class="text-white  focus:outline-none font-medium rounded-lg text-sm px-5 py-2 text-center inline-flex items-center"
@@ -51,14 +44,7 @@
                                             stroke-width="2" d="m1 1 4 4 4-4" />
                                     </svg>
                                 </button>
-                                {{-- <div x-data="{ open: false }" class="relative">
-                                <!-- Trigger -->
-                                <button @click="open = !open" class="flex items-center text-gray-700 hover:text-gray-900 focus:outline-none">
-                                    <span  class="text-white bg-amber-600 hover:bg-amber-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 lg:px-5 py-2 lg:py-2.5 mr-2">
-                                        {{ Auth::user()->name }}</span>
-                                    
-                                </button> --}}
-
+                          
                                 <!-- Dropdown menu -->
                                 <div id="dropdownInformation"
                                     class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
@@ -87,13 +73,6 @@
                                 </div>
 
 
-
-                                {{-- <form method="POST" action="{{ route('logout') }}">
-                                    @csrf
-                                    <button type="submit">Logout</button>
-                                </form> --}}
-                                {{-- <a href="{{ url('/dashboard') }}" class="text-white bg-amber-700 hover:bg-amber-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2">Dashboard</a> --}}
-                                {{-- @include('navigation-menu')  --}}
                             @else
                                 <a href ="{{ route('login') }}"
                                     class="text-gray-800 hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2  focus:outline-none ">Log
@@ -131,12 +110,12 @@
                                 aria-current="page">Home</a>
                         </li>
                         <li>
-                            <a href="#"
-                                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 md:hover:text-amber-600 {{ request()->is('#') ? 'md:text-amber-700' : '' }}  ">About</a>
+                            <a href="about"
+                                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 md:hover:text-amber-600 {{ request()->is('about') ? 'md:text-amber-700' : '' }}  ">About</a>
                         </li>
                         <li>
-                            <a href="#"
-                                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 md:hover:text-amber-600 {{ request()->is('#') ? 'md:text-amber-700' : '' }} ">Services</a>
+                            <a href="service"
+                                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 md:hover:text-amber-600 {{ request()->is('service') ? 'md:text-amber-700' : '' }} ">Services</a>
                         </li>
                         <li>
                             <a href="{{ route('gallary') }}"

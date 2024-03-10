@@ -15,9 +15,10 @@ return new class extends Migration
             $table->id();
             $table->date('date_debut');
             $table->date('date_fin');
-            $table->foreignId('id_client')->references('id')->on('clients');
-            $table->foreignId('idpersonnel')->references('id')->on('personnels');
+            $table->foreignId('id_client')->references('id')->on('clients'); //il est modifié pour etre referencé à la table users
+            $table->foreignId('idpersonnel')->references('id')->on('personnels');//il est modifié pour etre referencé à la table employes
             $table->float('montant',100);
+            $table->timestamps(); 
         });
     }
 

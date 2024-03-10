@@ -51,16 +51,16 @@ border-radius: 0.25rem;
 .title{
     position:absolute;
     color:#A2C579;
-    top:25px;
+    top:20px;
     margin-left:280px;
-    font-size:28px;  
+    font-size:24px;  
 }
-.text{
-    position:absolute;
-    top:70px;
-    margin-left:180px;
-    text-indent: -20px;
-  
+.text {
+   position: absolute;
+    margin-top:60px;
+    margin-left:130px;
+    text-indent:20px;
+    font-size:17px; 
 }
 .btn{
     position:absolute;

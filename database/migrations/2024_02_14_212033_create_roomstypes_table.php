@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('type', 400);
             $table->text('description');
             $table->integer('capacity');
-            $table->string('nb chambre',30);
+            $table->string('nb_chambre',30);
             $table->string('prix', 400);
             });
     }
